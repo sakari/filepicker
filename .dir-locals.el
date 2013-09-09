@@ -1,0 +1,11 @@
+(
+ (nil . ((indent-tabs-mode . nil)
+	 (tab-width . 4)
+	 (fill-column . 80)
+	 (c-basic-offset . 4)
+	 ))
+ (haxe-mode . ((indent-tabs-mode . nil)
+	 (tab-width . 4)
+	 (fill-column . 80)
+	 ))
+ )
