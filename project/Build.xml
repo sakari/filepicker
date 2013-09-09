@@ -8,12 +8,9 @@
 	<set name="mobile" value="1" if="webos"/>
 	
 	<files id="common">
-		
 		<compilerflag value="-Iinclude"/>
-		
 		<file name="common/ExternalInterface.cpp"/>
 		<file name="common/filepicker.mm"/>
-		
 	</files>
 	
 	<set name="name_prefix" value="lib" if="iphone"/>

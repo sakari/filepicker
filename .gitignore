@@ -1,3 +1,4 @@
 ndll/
 project/all_objs
-project/obj/
+project/obj
+Test/Export/

@@ -2,7 +2,7 @@ ndll:
 	cd project && haxelib run hxcpp Build.xml mac
 
 test: ndll
-	cd TestProject && openfl test cpp -debug -Ddebug
+	cd Test && openfl test cpp -debug -Ddebug
 
 all: ndll
 

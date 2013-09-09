@@ -1,4 +1,4 @@
-package;
+package sakari.filepicker;
 
 #if cpp
 import cpp.Lib;
@@ -10,7 +10,7 @@ import neko.Lib;
 class Filepicker {
 	
     public static function filepicker() {
-        return filepicke_dialog();
+        return filepicker_dialog();
     }
 	private static var filepicker_dialog = 
         Lib.load ("filepicker", "filepicker_dialog", 0);
