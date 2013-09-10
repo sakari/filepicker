@@ -3,6 +3,28 @@
 #import <AppKit/NSOpenPanel.h>
 
 namespace filepicker {
+
+  void SaveSelectionDialog(const char * extensions[]
+			   , int size
+			   , SaveCallback cb) {
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    NSMutableArray * exts = [[NSMutableArray alloc] initWithCapacity: size];
+
+    if(size > 0) {
+      for(int i = 0; i < size; i++) {  
+	[exts addObject: [NSString stringWithFormat: @"%s", extensions[i]]];
+      }
+      [panel setAllowedFileTypes: exts];
+    }
+    NSInteger clicked = [panel runModal];
+    if(clicked == NSFileHandlingPanelOKButton) {
+      cb([[[panel URL] path] cStringUsingEncoding: 1]);
+      return;
+    }
+    [exts release];
+    cb(NULL);
+  }
+			   
   void FileSelectionDialog(bool file
 			   , bool dir
 			   , bool multi

@@ -6,14 +6,21 @@ platforms to test with. Pull requests more than welcome.
 ## features
 
  * open file/dir dialog
+ * save file dialog with optional default extension
 
 ## example
 
-    import sakari.filepicker.Filepicker;
+    import sakari.filepicker.Open;
     ..
-    new Filepicker().chooseFiles().open(function(paths) {
+    new Open().chooseFiles().open(function(paths) {
         trace('you picked', paths);
     });
+
+    import sakari.filepicker.Save;
+    ..
+    new Save().extensions(['txt']).open(function(path) {
+        trace('you are saving', path);
+    })
 
 ## Build
 

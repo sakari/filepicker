@@ -6,10 +6,7 @@ import cpp.Lib;
 import neko.Lib;
 #end
 
-private class Builder {
-}
-
-class Filepicker {
+class Open {
     var _chooseFiles = false;
     var _chooseDirs = false;
     var _multiple = false;
