@@ -5,15 +5,13 @@ import sakari.filepicker.Filepicker;
 class Main extends Sprite {
 	public function new () {
 		super ();
-        Filepicker
-            .filepicker()
+        new Filepicker()
             .chooseFiles()
             .chooseDirs()
             .multiple()
             .open(function(p) {
                     trace('selected', p);
-                        Filepicker
-                            .filepicker()
+                    new Filepicker()
                             .chooseFiles()
                             .chooseDirs()
                             .multiple()

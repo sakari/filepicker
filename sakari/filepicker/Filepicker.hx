@@ -14,11 +14,7 @@ class Filepicker {
     var _chooseDirs = false;
     var _multiple = false;
     var _resolveAliases = false;
-    private function new() {}
-	
-    public static function filepicker() {
-        return new Filepicker();
-    }
+    public function new() {}
 
     public function chooseFiles() {
         _chooseFiles = true;
